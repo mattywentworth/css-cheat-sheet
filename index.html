@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./Resources/CSS/style.css" type="text/css" rel="stylesheet">
+    <title>CSS Selectors - Specificity</title>
+</head>
+<body>
+    <h1 class="title">Cheat Sheet: CSS Selectors</h1>
+    <p class="subtitle">Specificity</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Selector</th>
+                <th>Example Declaration</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="selector-column">
+                    <p>*</p>
+                </td>
+                <td class="declaration-column">
+                    <p>* {</p>
+                    <p class="declaration">margin: 0;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>Using an asterisk as your first declared CSS selector will apply the styling in the declaration block to every element in the HTML file. In this case, the margins will be painted as 0, overriding the default browser settings.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="selector-column">
+                    <p>html, body</p>
+                </td>
+                <td class="declaration-column">
+                    <p>html, body {</p>
+                    <p class="declaration">color: red;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>This is an example of a "type" selector. The rule targets all html and body elements and paints them red, overriding the default browser setting.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="selector-column">
+                    <p>p</p>
+                </td>
+                <td class="declaration-column">
+                    <p>p {</p>
+                    <p class="declaration">color: olive;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>Similar to the example above, using a HTML tag by itself as a CSS selector will apply the styling contained in the declaration block to all HTML elements matching the selector. In this case, the CSS will paint all < p > elements in the color Olive, overriding the "color: red;" delcaration established prior.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="selector-column">
+                    <p>.class</p>
+                </td>
+                <td class="declaration-column">
+                    <p>.class {</p>
+                    <p class="declaration">font-family: Roboto;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>By writing a class name with a period at the beginning, you can target all instances of that class with style declarations. In this case, the declaration targets all classes with the name "class" and paints them with the font Roboto, overriding the default browser setting.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="selector-column">
+                    <p>#id</p>
+                </td>
+                <td class="declaration-column">
+                    <p>#id {</p>
+                    <p class="declaration">color: goldenrod;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>By writing an id name with a hash at the beginning, you can target the instance of the id with your style declaration. In this case, the declaration targets the element with the id of "id" and paints them with the font color "goldenrod". So if the element with the id of "id" were a <span></span>< p > element, this declaration would override the olive color established in the second row of this table.</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="selector-column">
+                    <p>.class p</p>
+                </td>
+                <td class="declaration-column">
+                    <p>.class p {</p>
+                    <p class="declaration">color: lightskyblue;</p>
+                    <p>}</p>
+                </td>
+                <td class="description-column">
+                    <p>This is an example of a descendent combinator. By writing the 2 or more selectors with a space between selectors, you can target all elements within other elements. In this case, the rule paints all < p > elements within the element(s) with class "class" as lightskyblue. The < p > elements that are not children of the ".class" class will not be affected.</p>
+                </td>
+            </tr>
+        </tbody>
+        <tr></tr>
+    </table>
+</body>
+</html>
